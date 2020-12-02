@@ -1,3 +1,7 @@
+.navBar {
+    display: flex;
+}
+
 .contentCard {
     margin: auto;
     margin-top: 10rem;
@@ -29,5 +33,5 @@ button {
 
 #timerEl {
     color: red;
-    align-content: right; /*idk how to align it to the top right of the page* */
+    margin-left: auto;
 }
