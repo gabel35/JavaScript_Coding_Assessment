@@ -38,4 +38,18 @@ startPage()
 
 //create the questions (maybe 5 with 4 options each)//
 //each question will have 4 buttons (options) - 1 correct answer, that will move on without penalty and 3 that will move on and decrease 10 seconds from the timer//
+theBtn.addEventListener("click", function theQuestions() {
+  titleHeading.setAttribute("style", "display: none");
+  questionHeading.textContent = "Here will go a question";
+  welcomeP.setAttribute("style", "display: none");
+  theBtn.setAttribute("style", "display: none");
+  optionOne.textContent = "Option 1";
+  optionTwo.textContent = "Option 2";
+  optionThree.textContent = "Option 3";
+  optionFour.textContent = "Option 4";
+});
+
+
+
+
 //results page that will record the time remaining as the "final score/highscore" and allow player to record their name in a text box, plus the button that leads to the highscore page//
