@@ -48,102 +48,133 @@ theBtn.addEventListener("click", function theQuestions() {
 function question1 () {
   questionHeading.textContent = "1. Here will go a question";
   optionOne.textContent = "Option 1";
-  optionOne.addEventListener("click", wrongAnswer1());
-  optionTwo.textContent = "Option 2";
-  optionTwo.addEventListener("click", wrongAnswer1());
-  optionThree.textContent = "Option 3";
-  optionThree.addEventListener("click", rightAnswer1()), 
-  optionFour.textContent = "Option 4";
-  optionFour.addEventListener("click", wrongAnswer1());
-  function wrongAnswer1() {
+  optionOne.addEventListener("click", function wrongAnswer1() {
     countdownTimer -10;
     question2();
-  }
-  function rightAnswer1() {
+  });
+  optionTwo.textContent = "Option 2";
+  optionTwo.addEventListener("click", function wrongAnswer1() {
+    countdownTimer -10;
     question2();
-  }
+  });
+  optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", function rightAnswer1() {
+    question2();
+  }), 
+  optionFour.textContent = "Option 4";
+  optionFour.addEventListener("click", function wrongAnswer1() {
+    countdownTimer -10;
+    question2();
+  });
 }
 
 function question2 () {
   questionHeading.textContent = "2. Here will go a question";
   optionOne.textContent = "Option 1";
-  optionOne.addEventListener("click", wrongAnswer2());
-  optionTwo.textContent = "Option 2";
-  optionTwo.addEventListener("click", wrongAnswer2());
-  optionThree.textContent = "Option 3";
-  optionThree.addEventListener("click", rightAnswer2()), 
-  optionFour.textContent = "Option 4";
-  optionFour.addEventListener("click", wrongAnswer2());
-  function wrongAnswer2() {
+  optionOne.addEventListener("click", function wrongAnswer2() {
     countdownTimer -10;
     question3();
-  }
-  function rightAnswer2() {
+  });
+  optionTwo.textContent = "Option 2";
+  optionTwo.addEventListener("click",   function rightAnswer2() {
     question3();
-  }
+  });
+  optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", function wrongAnswer2() {
+    countdownTimer -10;
+    question3();
+  }), 
+  optionFour.textContent = "Option 4";
+  optionFour.addEventListener("click", function wrongAnswer2() {
+    countdownTimer -10;
+    question3();
+  });
 }
 
 function question3 () {
   questionHeading.textContent = "3. Here will go a question";
   optionOne.textContent = "Option 1";
-  optionOne.addEventListener("click", wrongAnswer3());
+  optionOne.addEventListener("click", function rightAnswer3() {
+    question4();
+  });
   optionTwo.textContent = "Option 2";
-  optionTwo.addEventListener("click", wrongAnswer3());
-  optionThree.textContent = "Option 3";
-  optionThree.addEventListener("click", rightAnswer3()), 
-  optionFour.textContent = "Option 4";
-  optionFour.addEventListener("click", wrongAnswer3());
-  function wrongAnswer3() {
+  optionTwo.addEventListener("click", function wrongAnswer3() {
     countdownTimer -10;
     question4();
-  }
-  function rightAnswer3() {
+  });
+  optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", function wrongAnswer3() {
+    countdownTimer -10;
     question4();
-  }
+  }), 
+  optionFour.textContent = "Option 4";
+  optionFour.addEventListener("click", function wrongAnswer3() {
+    countdownTimer -10;
+    question4();
+  });
 }
 
 function question4 () {
   questionHeading.textContent = "4. Here will go a question";
   optionOne.textContent = "Option 1";
-  optionOne.addEventListener("click", wrongAnswer4());
-  optionTwo.textContent = "Option 2";
-  optionTwo.addEventListener("click", wrongAnswer4());
-  optionThree.textContent = "Option 3";
-  optionThree.addEventListener("click", rightAnswer4()), 
-  optionFour.textContent = "Option 4";
-  optionFour.addEventListener("click", wrongAnswer4());
-  function wrongAnswer4() {
+  optionOne.addEventListener("click", function wrongAnswer4() {
     countdownTimer -10;
     question5();
-  }
-  function rightAnswer4() {
+  });
+  optionTwo.textContent = "Option 2";
+  optionTwo.addEventListener("click", function rightAnswer4() {
     question5();
-  }
+  });
+  optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", function wrongAnswer4() {
+    countdownTimer -10;
+    question5();
+  }), 
+  optionFour.textContent = "Option 4";
+  optionFour.addEventListener("click", function wrongAnswer4() {
+    countdownTimer -10;
+    question5();
+  });
 }
 
 function question5 () {
   questionHeading.textContent = "5. Here will go a question";
   optionOne.textContent = "Option 1";
-  optionOne.addEventListener("click", wrongAnswer5());
-  optionTwo.textContent = "Option 2";
-  optionTwo.addEventListener("click", wrongAnswer5());
-  optionThree.textContent = "Option 3";
-  optionThree.addEventListener("click", rightAnswer5()), 
-  optionFour.textContent = "Option 4";
-  optionFour.addEventListener("click", wrongAnswer5());
-  function wrongAnswer5() {
+  optionOne.addEventListener("click", function wrongAnswer5() {
     countdownTimer -10;
     resultPage();
-  }
-  function rightAnswer5() {
+  });
+  optionTwo.textContent = "Option 2";
+  optionTwo.addEventListener("click", function wrongAnswer5() {
+    countdownTimer -10;
     resultPage();
-  }
+  });
+  optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", function wrongAnswer5() {
+    countdownTimer -10;
+    resultPage();
+  }), 
+  optionFour.textContent = "Option 4";
+  optionFour.addEventListener("click", function rightAnswer5() {
+    resultPage();
+  });
 }
 
 function resultPage() {
   titleHeading.textContent = "You're Done!";
   welcomeP.textContent = "Enter your name: ";
   theBtn.textContent = "Submit Score";
+  questionHeading.setAttribute("style", "display: none");
+  optionOne.setAttribute("style", "display: none");
+  optionTwo.setAttribute("style", "display: none");
+  optionThree.setAttribute("style", "display: none");
+  optionFour.setAttribute("style", "display: none");
+  titleHeading.setAttribute("style", "display: visible");
+  welcomeP.setAttribute("style", "display: visible");
+  theBtn.setAttribute("style", "display: visible");
+  theBtn.addEventListener("click", function highscoresPage(){
+    href="./highscore.html"; 
+  })
 }
 
 
