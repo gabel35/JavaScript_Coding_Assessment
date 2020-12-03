@@ -49,12 +49,12 @@ function question1 () {
   questionHeading.textContent = "1. Here will go a question";
   optionOne.textContent = "Option 1";
   optionOne.addEventListener("click", function wrongAnswer1() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question2();
   });
   optionTwo.textContent = "Option 2";
   optionTwo.addEventListener("click", function wrongAnswer1() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question2();
   });
   optionThree.textContent = "Option 3";
@@ -63,30 +63,30 @@ function question1 () {
   }), 
   optionFour.textContent = "Option 4";
   optionFour.addEventListener("click", function wrongAnswer1() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question2();
   });
 }
 
 function question2 () {
-  questionHeading.textContent = "2. Here will go a question";
-  optionOne.textContent = "Option 1";
+  questionHeading.textContent = "2. An array is a special variable, which can:";
+  optionOne.textContent = "a. only hold 1 value at a time";
   optionOne.addEventListener("click", function wrongAnswer2() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question3();
   });
-  optionTwo.textContent = "Option 2";
+  optionTwo.textContent = "b. hold more than 1 value at a time";
   optionTwo.addEventListener("click",   function rightAnswer2() {
     question3();
   });
-  optionThree.textContent = "Option 3";
+  optionThree.textContent = "c. only hold integers";
   optionThree.addEventListener("click", function wrongAnswer2() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question3();
   }), 
-  optionFour.textContent = "Option 4";
+  optionFour.textContent = "d. hold your hand";
   optionFour.addEventListener("click", function wrongAnswer2() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question3();
   });
 }
@@ -99,17 +99,17 @@ function question3 () {
   });
   optionTwo.textContent = "Option 2";
   optionTwo.addEventListener("click", function wrongAnswer3() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question4();
   });
   optionThree.textContent = "Option 3";
   optionThree.addEventListener("click", function wrongAnswer3() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question4();
   }), 
   optionFour.textContent = "Option 4";
   optionFour.addEventListener("click", function wrongAnswer3() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question4();
   });
 }
@@ -118,7 +118,7 @@ function question4 () {
   questionHeading.textContent = "4. Here will go a question";
   optionOne.textContent = "Option 1";
   optionOne.addEventListener("click", function wrongAnswer4() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question5();
   });
   optionTwo.textContent = "Option 2";
@@ -127,12 +127,12 @@ function question4 () {
   });
   optionThree.textContent = "Option 3";
   optionThree.addEventListener("click", function wrongAnswer4() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question5();
   }), 
   optionFour.textContent = "Option 4";
   optionFour.addEventListener("click", function wrongAnswer4() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     question5();
   });
 }
@@ -141,17 +141,17 @@ function question5 () {
   questionHeading.textContent = "5. Here will go a question";
   optionOne.textContent = "Option 1";
   optionOne.addEventListener("click", function wrongAnswer5() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     resultPage();
   });
   optionTwo.textContent = "Option 2";
   optionTwo.addEventListener("click", function wrongAnswer5() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     resultPage();
   });
   optionThree.textContent = "Option 3";
   optionThree.addEventListener("click", function wrongAnswer5() {
-    countdownTimer -10;
+    countdownTimer = countdownTimer-10;
     resultPage();
   }), 
   optionFour.textContent = "Option 4";
