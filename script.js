@@ -25,8 +25,6 @@ function timerCountdown() {
   }, 1000);
 }
 
-// timerCountdown() <-- will use this later -->
-
 //creating the starter page//
 function startPage() {
   titleHeading.textContent = "Javascript Coding Assessment";
@@ -40,16 +38,113 @@ startPage()
 //each question will have 4 buttons (options) - 1 correct answer, that will move on without penalty and 3 that will move on and decrease 10 seconds from the timer//
 theBtn.addEventListener("click", function theQuestions() {
   titleHeading.setAttribute("style", "display: none");
-  questionHeading.textContent = "Here will go a question";
   welcomeP.setAttribute("style", "display: none");
   theBtn.setAttribute("style", "display: none");
+  timerCountdown();
+  question1 ();
+  });
+
+
+function question1 () {
+  questionHeading.textContent = "1. Here will go a question";
   optionOne.textContent = "Option 1";
+  optionOne.addEventListener("click", wrongAnswer1());
   optionTwo.textContent = "Option 2";
+  optionTwo.addEventListener("click", wrongAnswer1());
   optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", rightAnswer1()), 
   optionFour.textContent = "Option 4";
-});
+  optionFour.addEventListener("click", wrongAnswer1());
+  function wrongAnswer1() {
+    countdownTimer -10;
+    question2();
+  }
+  function rightAnswer1() {
+    question2();
+  }
+}
 
+function question2 () {
+  questionHeading.textContent = "2. Here will go a question";
+  optionOne.textContent = "Option 1";
+  optionOne.addEventListener("click", wrongAnswer2());
+  optionTwo.textContent = "Option 2";
+  optionTwo.addEventListener("click", wrongAnswer2());
+  optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", rightAnswer2()), 
+  optionFour.textContent = "Option 4";
+  optionFour.addEventListener("click", wrongAnswer2());
+  function wrongAnswer2() {
+    countdownTimer -10;
+    question3();
+  }
+  function rightAnswer2() {
+    question3();
+  }
+}
 
+function question3 () {
+  questionHeading.textContent = "3. Here will go a question";
+  optionOne.textContent = "Option 1";
+  optionOne.addEventListener("click", wrongAnswer3());
+  optionTwo.textContent = "Option 2";
+  optionTwo.addEventListener("click", wrongAnswer3());
+  optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", rightAnswer3()), 
+  optionFour.textContent = "Option 4";
+  optionFour.addEventListener("click", wrongAnswer3());
+  function wrongAnswer3() {
+    countdownTimer -10;
+    question4();
+  }
+  function rightAnswer3() {
+    question4();
+  }
+}
+
+function question4 () {
+  questionHeading.textContent = "4. Here will go a question";
+  optionOne.textContent = "Option 1";
+  optionOne.addEventListener("click", wrongAnswer4());
+  optionTwo.textContent = "Option 2";
+  optionTwo.addEventListener("click", wrongAnswer4());
+  optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", rightAnswer4()), 
+  optionFour.textContent = "Option 4";
+  optionFour.addEventListener("click", wrongAnswer4());
+  function wrongAnswer4() {
+    countdownTimer -10;
+    question5();
+  }
+  function rightAnswer4() {
+    question5();
+  }
+}
+
+function question5 () {
+  questionHeading.textContent = "5. Here will go a question";
+  optionOne.textContent = "Option 1";
+  optionOne.addEventListener("click", wrongAnswer5());
+  optionTwo.textContent = "Option 2";
+  optionTwo.addEventListener("click", wrongAnswer5());
+  optionThree.textContent = "Option 3";
+  optionThree.addEventListener("click", rightAnswer5()), 
+  optionFour.textContent = "Option 4";
+  optionFour.addEventListener("click", wrongAnswer5());
+  function wrongAnswer5() {
+    countdownTimer -10;
+    resultPage();
+  }
+  function rightAnswer5() {
+    resultPage();
+  }
+}
+
+function resultPage() {
+  titleHeading.textContent = "You're Done!";
+  welcomeP.textContent = "Enter your name: ";
+  theBtn.textContent = "Submit Score";
+}
 
 
 //results page that will record the time remaining as the "final score/highscore" and allow player to record their name in a text box, plus the button that leads to the highscore page//
