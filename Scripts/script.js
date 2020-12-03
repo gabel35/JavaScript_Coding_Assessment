@@ -160,6 +160,7 @@ function question5 () {
   });
 }
 
+//results page that will record the time remaining as the "final score/highscore" and allow player to record their name in a text box, plus the button that leads to the highscore page//
 function resultPage() {
   titleHeading.textContent = "You're Done!";
   welcomeP.textContent = "Enter your name: ";
@@ -172,10 +173,8 @@ function resultPage() {
   titleHeading.setAttribute("style", "display: visible");
   welcomeP.setAttribute("style", "display: visible");
   theBtn.setAttribute("style", "display: visible");
-  theBtn.addEventListener("click", function highscoresPage(){
-    href="./highscore.html"; 
-  })
+  theBtn.addEventListener("click", function hsPage (){
+    location.href = "./highscore.html";
+  }); 
+  
 }
-
-
-//results page that will record the time remaining as the "final score/highscore" and allow player to record their name in a text box, plus the button that leads to the highscore page//
