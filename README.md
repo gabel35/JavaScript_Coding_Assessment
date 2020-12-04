@@ -24,7 +24,7 @@ Hit "Start Quiz" to begin answering questions. 5 questions will appear one after
 Please follow the following link to the quiz!
 !(https://gabel35.github.io/JavaScript_Coding_Assessment/)
 
-![code quiz](./Assets/javascript-assessment-webpage.png)
+![code quiz](./Assets/javascript-assessment-webpage.PNG)
 
 
 ## Credits
