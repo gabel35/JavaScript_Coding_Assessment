@@ -8,25 +8,24 @@ var highScores = [];
 
 retrieveStoredHS ();
 
+// Get highscores that are stored in localStorage and update array//
 function retrieveStoredHS() {
-  // Get highscores that are stored in localStorage
-  // Parsing the JSON string to an object
   var storedHS = JSON.parse(localStorage.getItem("highScores"));
 
-  // If highscores were retrieved from localStorage, update the highScores array to it
   if (storedHS !== null) {
     highScores = storedHS;
   }
 
-  // Render highScores to the DOM
   renderHS();
 }
 
-function renderHS() {
-  // Clear pEL element
-  pEL.innerHTML = "";
+// Stringify and set "highscores" key in localStorage to highScores array//
+function storeHS() {
+  localStorage.setItem("highscores", JSON.stringify(highScores));
+}
 
-  // Render a new li for each highscore
+// make a new li for each highscore//
+function renderHS() {
   for (var i = 0; i < highScores.length; i++) {
     var highScore = highScores[i];
 

@@ -9,6 +9,8 @@ var optionOne = document.getElementById("optionOne");
 var optionTwo = document.getElementById("optionTwo");
 var optionThree = document.getElementById("optionThree");
 var optionFour = document.getElementById("optionFour");
+var pEL = document.getElementById("pEL");
+
 
 var highScores = [];
 
@@ -20,9 +22,12 @@ function timerCountdown() {
     countdownTimer--;
     timerEl.textContent = "Time Remaining: " + countdownTimer;
 
-    if(countdownTimer === 0) {
+    if(countdownTimer <= 0) {
       clearInterval(timerInterval);
       resultPage();
+    }
+    else if(resultPage) {
+      clearInterval(timerInterval);
     }
 
   }, 1000);
@@ -58,24 +63,24 @@ theBtn.addEventListener("click", function theQuestions() {
 
 
 function question1 () {
-  questionHeading.textContent = "1. Here will go a question";
-  optionOne.textContent = "Option 1";
+  questionHeading.textContent = "1. A function is executed:";
+  optionOne.textContent = "a. automatically";
   optionOne.addEventListener("click", function wrongAnswer1() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question2();
   });
-  optionTwo.textContent = "Option 2";
+  optionTwo.textContent = "b. only when a button is clicked";
   optionTwo.addEventListener("click", function wrongAnswer1() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question2();
   });
-  optionThree.textContent = "Option 3";
+  optionThree.textContent = "c. when called upon";
   optionThree.addEventListener("click", function rightAnswer1() {
     question2();
   }), 
-  optionFour.textContent = "Option 4";
+  optionFour.textContent = "d. when inside a variable";
   optionFour.addEventListener("click", function wrongAnswer1() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question2();
   });
 }
@@ -84,7 +89,7 @@ function question2 () {
   questionHeading.textContent = "2. An array is a special variable, which can:";
   optionOne.textContent = "a. only hold 1 value at a time";
   optionOne.addEventListener("click", function wrongAnswer2() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question3();
   });
   optionTwo.textContent = "b. hold more than 1 value at a time";
@@ -93,80 +98,80 @@ function question2 () {
   });
   optionThree.textContent = "c. only hold integers";
   optionThree.addEventListener("click", function wrongAnswer2() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question3();
   }), 
   optionFour.textContent = "d. hold your hand";
   optionFour.addEventListener("click", function wrongAnswer2() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question3();
   });
 }
 
 function question3 () {
-  questionHeading.textContent = "3. Here will go a question";
-  optionOne.textContent = "Option 1";
+  questionHeading.textContent = "3. Which of the following cannot be used for strings?";
+  optionOne.textContent = "a. double quotes inside duoble quotes";
   optionOne.addEventListener("click", function rightAnswer3() {
     question4();
   });
-  optionTwo.textContent = "Option 2";
+  optionTwo.textContent = "b. double quotes";
   optionTwo.addEventListener("click", function wrongAnswer3() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question4();
   });
-  optionThree.textContent = "Option 3";
+  optionThree.textContent = "c. single quotes";
   optionThree.addEventListener("click", function wrongAnswer3() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question4();
   }), 
-  optionFour.textContent = "Option 4";
+  optionFour.textContent = 'd. single quotes inside double quotes';
   optionFour.addEventListener("click", function wrongAnswer3() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question4();
   });
 }
 
 function question4 () {
-  questionHeading.textContent = "4. Here will go a question";
-  optionOne.textContent = "Option 1";
+  questionHeading.textContent = "4. Which of the following is not a data type?";
+  optionOne.textContent = "a. numbers/integers";
   optionOne.addEventListener("click", function wrongAnswer4() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question5();
   });
-  optionTwo.textContent = "Option 2";
+  optionTwo.textContent = "b. yarn";
   optionTwo.addEventListener("click", function rightAnswer4() {
     question5();
   });
-  optionThree.textContent = "Option 3";
+  optionThree.textContent = "c. strings";
   optionThree.addEventListener("click", function wrongAnswer4() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question5();
   }), 
-  optionFour.textContent = "Option 4";
+  optionFour.textContent = "d. objects";
   optionFour.addEventListener("click", function wrongAnswer4() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     question5();
   });
 }
 
 function question5 () {
-  questionHeading.textContent = "5. Here will go a question";
-  optionOne.textContent = "Option 1";
+  questionHeading.textContent = "5. 'Var' can be used to:";
+  optionOne.textContent = "a. assign a value";
   optionOne.addEventListener("click", function wrongAnswer5() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 1;
     resultPage();
   });
-  optionTwo.textContent = "Option 2";
+  optionTwo.textContent = "b. store data values";
   optionTwo.addEventListener("click", function wrongAnswer5() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 1;
     resultPage();
   });
-  optionThree.textContent = "Option 3";
+  optionThree.textContent = "c. laugh at values";
   optionThree.addEventListener("click", function wrongAnswer5() {
-    countdownTimer = countdownTimer-5;
+    countdownTimer -= 5;
     resultPage();
   }), 
-  optionFour.textContent = "Option 4";
+  optionFour.textContent = "d. both a and b";
   optionFour.addEventListener("click", function rightAnswer5() {
     resultPage();
   });
@@ -187,27 +192,43 @@ function resultPage() {
   welcomeP.setAttribute("style", "display: visible");
   theBtn.setAttribute("style", "display: visible");
   theBtn.addEventListener("click", function hsPage (){
-    location.href = "./highscore.html";
-  }); 
+    var highscoreText = textBox.value.trim();
+    // not allowing a blank answer for the name in the text box//
+    if (highscoreText === "") {
+      return;
+    }  
+    // Adding new highscore to array//
+    highScores.push(highscoreText);
+    storeHS();
+    function storeHS() {
+      localStorage.setItem("highScores", JSON.stringify(HighScores));
+    };
+
+    retrieveStoredHS ();
+
+    // Get highscores that are stored in localStorage and update array//
+    function retrieveStoredHS() {
+      var storedHS = JSON.parse(localStorage.getItem("highScores"));
+
+      if (storedHS !== null) {
+        highScores = storedHS;
+      }
+
+      renderHS();
+    }
+
+    // make a new li for each highscore//
+    function renderHS() {
+      for (var i = 0; i < highScores.length; i++) {
+        var highScore = highScores[i];
+
+        var li = document.createElement("li");
+        li.textContent = highScore;
+        li.setAttribute("data-index", i);
+        pEL.appendChild(li);
+      }
+    }
+    // location.href = "./highscore.html";
+  })
 }
 
-// having the "name" in textbox and the timer saved to local storage after submit//
-textBox.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  var highscoreText = textBox.value.trim();
-
-  // not allowing a blank answer for the name in the text box//
-  if (highscoreText === "") {
-    return;
-  }
-
-  // Adding new highscore to array//
-  highScores.push(highscoreText);
-  
-  storeHS();
-});
-
-function storeHS() {
-  localStorage.setItem("highScores", JSON.stringify(HighScores));
-}
