@@ -1,91 +1,40 @@
- # 04 Web APIs: Code Quiz
+ # Jazascript Coding Assessment
 
-## Your Task
+## Description
 
-As you proceed in your journey to becoming a full-stack web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+This is a 5-question assessment to test basic Javascript knowledge.
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework will teach you all the skills you need to succeed in this assignment.
+## Table of Contents
 
-
-## User Story
-
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
 
 
-## Acceptance Criteria
+## Installation
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-```
+N/A
 
 
-## Mock-Up
+## Usage
 
-The following animation demonstrates the application functionality:
+Hit "Start Quiz" to begin answering questions. 5 questions will appear one after the other. If you answer a question wrong, 5 seconds will be deducted from your time. Once the timer reaches 0 or you answer the last question, you will be able to save your time and name which will appear on a list of "highscores".
 
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
+Please follow the following link to the quiz!
+!(https://gabel35.github.io/JavaScript_Coding_Assessment/)
 
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+![code quiz](./Assets/javascript-assessment-webpage.png)
 
 
-## Review
+## Credits
 
-You are required to submit BOTH of the following for review:
+Thank you to all the TA's for your help.
 
-* The URL of the functional, deployed application.
+### License
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+N/A
 
-- - -
-© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+-------------
+
+Thank you!

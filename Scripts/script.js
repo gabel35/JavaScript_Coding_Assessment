@@ -11,7 +11,6 @@ var optionThree = document.getElementById("optionThree");
 var optionFour = document.getElementById("optionFour");
 var pEL = document.getElementById("pEL");
 
-
 var highScores = [];
 
 //creating the timer/countdown to be displayed through quiz//
@@ -26,10 +25,6 @@ function timerCountdown() {
       clearInterval(timerInterval);
       resultPage();
     }
-    else if(resultPage) {
-      clearInterval(timerInterval);
-    }
-
   }, 1000);
 }
 
@@ -192,7 +187,7 @@ function resultPage() {
   welcomeP.setAttribute("style", "display: visible");
   theBtn.setAttribute("style", "display: visible");
   theBtn.addEventListener("click", function hsPage (){
-    var highscoreText = textBox.value.trim();
+    var highscoreText = textBox.value;
     // not allowing a blank answer for the name in the text box//
     if (highscoreText === "") {
       return;
@@ -228,7 +223,7 @@ function resultPage() {
         pEL.appendChild(li);
       }
     }
-    // location.href = "./highscore.html";
+    location.href = "./highscore.html";
   })
 }
 
