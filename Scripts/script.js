@@ -3,11 +3,14 @@ var timerEl = document.getElementById("timerEl");
 var titleHeading = document.getElementById("titleHeading");
 var questionHeading = document.getElementById("questionHeading");
 var welcomeP = document.getElementById("welcomeP");
+var textBox = document.getElementById("textBox");
 var theBtn = document.getElementById("theBtn");
 var optionOne = document.getElementById("optionOne");
 var optionTwo = document.getElementById("optionTwo");
 var optionThree = document.getElementById("optionThree");
 var optionFour = document.getElementById("optionFour");
+
+var highScores = [];
 
 //creating the timer/countdown to be displayed through quiz//
 var countdownTimer = 90;
@@ -30,16 +33,25 @@ function startPage() {
   titleHeading.textContent = "Javascript Coding Assessment";
   welcomeP.textContent = "Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will be penalized by deducting ten seconds from your time.";
   theBtn.textContent = "Start Quiz";
+  textBox.setAttribute("style", "display: none");
+  optionOne.setAttribute("style", "display: none")
+  optionTwo.setAttribute("style", "display: none")
+  optionThree.setAttribute("style", "display: none")
+  optionFour.setAttribute("style", "display: none")
 }
 
 startPage()
 
-//create the questions (maybe 5 with 4 options each)//
-//each question will have 4 buttons (options) - 1 correct answer, that will move on without penalty and 3 that will move on and decrease 10 seconds from the timer//
+//create the questions (5 with 4 options each)//
+//each question has 4 buttons (options) - 1 correct answer, that will move on without penalty and 3 that will move on and decrease 5 seconds from the timer//
 theBtn.addEventListener("click", function theQuestions() {
   titleHeading.setAttribute("style", "display: none");
   welcomeP.setAttribute("style", "display: none");
   theBtn.setAttribute("style", "display: none");
+  optionOne.setAttribute("style", "display: visible")
+  optionTwo.setAttribute("style", "display: visible")
+  optionThree.setAttribute("style", "display: visible")
+  optionFour.setAttribute("style", "display: visible")
   timerCountdown();
   question1 ();
   });
@@ -49,12 +61,12 @@ function question1 () {
   questionHeading.textContent = "1. Here will go a question";
   optionOne.textContent = "Option 1";
   optionOne.addEventListener("click", function wrongAnswer1() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question2();
   });
   optionTwo.textContent = "Option 2";
   optionTwo.addEventListener("click", function wrongAnswer1() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question2();
   });
   optionThree.textContent = "Option 3";
@@ -63,7 +75,7 @@ function question1 () {
   }), 
   optionFour.textContent = "Option 4";
   optionFour.addEventListener("click", function wrongAnswer1() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question2();
   });
 }
@@ -72,7 +84,7 @@ function question2 () {
   questionHeading.textContent = "2. An array is a special variable, which can:";
   optionOne.textContent = "a. only hold 1 value at a time";
   optionOne.addEventListener("click", function wrongAnswer2() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question3();
   });
   optionTwo.textContent = "b. hold more than 1 value at a time";
@@ -81,12 +93,12 @@ function question2 () {
   });
   optionThree.textContent = "c. only hold integers";
   optionThree.addEventListener("click", function wrongAnswer2() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question3();
   }), 
   optionFour.textContent = "d. hold your hand";
   optionFour.addEventListener("click", function wrongAnswer2() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question3();
   });
 }
@@ -99,17 +111,17 @@ function question3 () {
   });
   optionTwo.textContent = "Option 2";
   optionTwo.addEventListener("click", function wrongAnswer3() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question4();
   });
   optionThree.textContent = "Option 3";
   optionThree.addEventListener("click", function wrongAnswer3() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question4();
   }), 
   optionFour.textContent = "Option 4";
   optionFour.addEventListener("click", function wrongAnswer3() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question4();
   });
 }
@@ -118,7 +130,7 @@ function question4 () {
   questionHeading.textContent = "4. Here will go a question";
   optionOne.textContent = "Option 1";
   optionOne.addEventListener("click", function wrongAnswer4() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question5();
   });
   optionTwo.textContent = "Option 2";
@@ -127,12 +139,12 @@ function question4 () {
   });
   optionThree.textContent = "Option 3";
   optionThree.addEventListener("click", function wrongAnswer4() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question5();
   }), 
   optionFour.textContent = "Option 4";
   optionFour.addEventListener("click", function wrongAnswer4() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     question5();
   });
 }
@@ -141,17 +153,17 @@ function question5 () {
   questionHeading.textContent = "5. Here will go a question";
   optionOne.textContent = "Option 1";
   optionOne.addEventListener("click", function wrongAnswer5() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     resultPage();
   });
   optionTwo.textContent = "Option 2";
   optionTwo.addEventListener("click", function wrongAnswer5() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     resultPage();
   });
   optionThree.textContent = "Option 3";
   optionThree.addEventListener("click", function wrongAnswer5() {
-    countdownTimer = countdownTimer-10;
+    countdownTimer = countdownTimer-5;
     resultPage();
   }), 
   optionFour.textContent = "Option 4";
@@ -164,6 +176,7 @@ function question5 () {
 function resultPage() {
   titleHeading.textContent = "You're Done!";
   welcomeP.textContent = "Enter your name: ";
+  textBox.setAttribute("style", "display: visible");
   theBtn.textContent = "Submit Score";
   questionHeading.setAttribute("style", "display: none");
   optionOne.setAttribute("style", "display: none");
@@ -176,5 +189,25 @@ function resultPage() {
   theBtn.addEventListener("click", function hsPage (){
     location.href = "./highscore.html";
   }); 
+}
+
+// having the "name" in textbox and the timer saved to local storage after submit//
+textBox.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  var highscoreText = textBox.value.trim();
+
+  // not allowing a blank answer for the name in the text box//
+  if (highscoreText === "") {
+    return;
+  }
+
+  // Adding new highscore to array//
+  highScores.push(highscoreText);
   
+  storeHS();
+});
+
+function storeHS() {
+  localStorage.setItem("highScores", JSON.stringify(HighScores));
 }
